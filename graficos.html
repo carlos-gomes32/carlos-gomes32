@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficos</title>
+   
+<style>body {font-family: Arial, Helvetica, sans-serif; background-color: rgb(85, 85, 85); margin: 0%;}</style>
+
+
+</head>
+
+<body>
+
+  <nav class="navbar" style="background-color: black; width: 100vw;">
+    <div class="container-fluid">
+        
+      <span class="navbar-brand mb-0 h1" style="font-size: 40px; text-align: center; color: white; font-family: 'Times New Roman', Times, serif;"> <img src="MS-removebg-preview.png" width="100px" height="90px">More Sustentanaibility BR</span>
+    </div>
+
+    
+  </nav>
+
+
+
+<nav class="navbar" style="background-color: rgb(58, 58, 58); justify-items: center; width: 100vw; justify-content: center;">
+    <center><div class="container-fluid">
+<span class="navbar-brand mb-0 h1" style="font-size: 30px; color: azure; "><i>Sustentabilidade e reciclagem de equipamentos eletrônicos</i></span>
+
+</div></center>
+</nav>
+
+<div class="container-fluid" style="border: 2px black solid; border-radius: 2%; background-color: white; margin-left: 100px; margin-right: 100px; margin-top: 80px; padding: 5%; box-shadow: 0px 10px 30px;">
+
+<h1 style="font-size: 50px;">Brasil é o 5º país que mais produz resíduos eletrônicos no mundo, mas descarte correto ainda é crítico </h1> <br>
+ <p style="font-size: 20px;"> Por ano, o país produz 2,4 milhões de toneladas de lixo eletrônico e poderia ser muito mais. Segundo pesquisas  
+  85% dos brasileiros <br> têm em casa algum aparelho que não usam e não sabem o que fazer com ele. O plano nacional de resíduos
+   sólidos determina que <br> os fabricantes e importadores coletem em 2024 12% dos produtos lançados no mercado. Para o ano que vem,
+    a meta é maior: 17%.  <br> Para isso, o setor mantém 6.250 postos de entrega voluntária espalhados pelo país. Mas a representante
+    da Associação Brasileira <br>de Reciclagem de Eletroeletrônicos e Eletrodomésticos diz que falta adesão do setor produtivo.</p>
+
+ <br> <center><h2>O grafico abaixo representa o crescimento do lixo eletrônico descartado indevidamente no Brasil em Toneladas</h2></center> <br>
+  <div>
+    <canvas id="grafico1"></canvas>
+  </div>
+</div> 
+
+<br><br>
+
+
+
+
+<br><br>
+
+<footer style="background-color: blue; width: 100vw; color: azure; display: grid; justify-items: center;"> A <i>More Sustentanaibilty BR</i> é um projeto em parceria com alunos da faculdade <a href="https://www.unip.br/">UNIP</a> afim de promover e incentivar o correto descarte de material eletrônico no Brasil.  © </footer>
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+   const ctx = document.getElementById('grafico1');
+
+   new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2020', '2021', '2022', '2023', '2024'],
+      datasets: [{
+        label: 'Quantidade de Lixo eletrônico produzida no Brasil (toneladas) nos ultimos anos',
+        data: [2600, 1700, 1945, 1950, 1900, 2300],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+</script>
+
+
+
+
+</html>
